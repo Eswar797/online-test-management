@@ -1,0 +1,42 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Test Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Online Test Management System</h1>
+        <div id="login-section">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter password">
+            <button id="login-btn">Login</button>
+        </div>
+
+        <div id="teacher-section" style="display:none;">
+            <h2>Create Test</h2>
+            <input type="text" id="test-title" placeholder="Test Title">
+            <textarea id="questions" placeholder="Enter questions in JSON format"></textarea>
+            <button id="create-test-btn">Create Test</button>
+        </div>
+
+        <div id="student-section" style="display:none;">
+            <h2>Available Tests</h2>
+            <ul id="test-list"></ul>
+            <div id="test-taker" style="display:none;">
+                <h3 id="test-title-display"></h3>
+                <div id="questions-display"></div>
+                <button id="submit-test-btn">Submit Test</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
